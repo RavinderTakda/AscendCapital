@@ -4,6 +4,8 @@ require('dotenv').config()
 const connecton = mongoose.connect("mongodb+srv://RavinderTakda:RaviTakda8306@cluster0.7zsjhui.mongodb.net/")
 
 
+
+
 const LoginSchma = mongoose.Schema({
 
 email:{type:String,required:true},
