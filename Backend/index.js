@@ -1,5 +1,5 @@
 const express = require("express")
-const bcrypt = require("bcrypt")
+
 const cors = require("cors")
 const jwt = require("jsonwebtoken")
 require('dotenv').config()
@@ -152,7 +152,7 @@ try{
     console.log(singleuser,"sdfsfsf")
     const userd = singleuser[0]._id
   
-    const token = jwt.sign({ foo: userd }, 'shhhhh');
+    const token = jwt.sign({ foo: userd }, 'token');
   
     res.send(token)
 }
@@ -169,6 +169,13 @@ catch{
 
 
 
-app.listen(8000,()=>{
+app.listen(8000,async()=>{
+  try{
+    await connection,
+    console.log("Connection to Mongodb Successfull");
+}
+catch(err){
+    console.log("Error connection to db")
+}
     console.log("welcome to Backend")
 })

@@ -22,7 +22,7 @@ const todoSchma = mongoose.Schema({
     awards: [{
         award: String,
         year: Number,
-        by: String
+        
       }],
     id:{type:Number}
 })
