@@ -169,13 +169,7 @@ catch{
 
 
 
-app.listen(8000,async()=>{
-  try{
-    await connection,
-    console.log("Connection to Mongodb Successfull");
-}
-catch(err){
-    console.log("Error connection to db")
-}
+app.listen(8000,()=>{
+
     console.log("welcome to Backend")
 })
