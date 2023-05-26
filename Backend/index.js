@@ -86,8 +86,8 @@ app.post ("/tododelete",async(req,res)=>{
 
     try {
   await  todomodel.updateOne(
-        { "id":id}, // Specify the document that contains the books array
-        { $pull: { "awards": { "_id": _id } } }// Use $pull to remove the book with the specified id
+        { "id":id},
+        { $pull: { "awards": { "_id": _id } } }
   )
     }
 
@@ -118,8 +118,8 @@ app.post("/dro",async(req,res)=>{
 
     try {
         await  todomodel.updateOne(
-              { "id":dragid}, // Specify the document that contains the books array
-              { $pull: { "awards": { "_id":id } } }// Use $pull to remove the book with the specified id
+              { "id":dragid},
+              { $pull: { "awards": { "_id":id } } }
         )
 
         const result = await todomodel.updateMany(
