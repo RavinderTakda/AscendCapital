@@ -1,7 +1,9 @@
 
 const mongoose = require("mongoose")
 require('dotenv').config()
-const connecton = mongoose.connect("mongodb+srv://RavinderTakda:RaviTakda8306@cluster0.7zsjhui.mongodb.net/")
+
+mongoose.set('strictQuery',true)
+const connecton = mongoose.connect(process.env.MongoURL)
 
 
 
