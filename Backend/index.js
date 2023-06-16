@@ -157,7 +157,7 @@ try{
     res.send(token)
 }
 catch{
-  console.log('Something went wrong')
+  console.log(' server error')
 }
 })
 
