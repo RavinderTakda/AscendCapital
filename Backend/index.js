@@ -172,7 +172,7 @@ catch{
 app.listen(8000,async()=>{
 
   try{
-    await connection,
+    await connecton,
     console.log("Connection to Mongodb Successfull");
 }
 catch(err){
